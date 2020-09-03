@@ -1,0 +1,82 @@
+<%- include('./partials/header')-%>
+
+<%- include('./partials/_add_btn.ejs')-%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <form method="POST" action="/add">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="classement">Classement</label>
+                            <input type="text" class="form-control" name="classement">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Nom</label>
+                            <input type="text" class="form-control" name="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" class="form-control" name="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="text" class="form-control" name="age">
+                        </div>
+                        <div class="form-group">
+                            <label for="nationnality">Nationnalité</label>
+                            <select class="form-control" name="nationnality">
+                                <option>Américain</option>
+                                <option>Français</option>
+                                <option>Anglais</option>
+                                <option>Espagnol</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="wealth">Fortune</label>
+                            <input type="text" class="form-control" name="wealth">
+                        </div>
+                        <div class="form-group">
+                            <label for="factory">Entreprise</label>
+                            <input type="text" class="form-control" name="factory">
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Secteur</label>
+                            <select class="form-control" name="business">
+                                <option>E-commerce</option>
+                                <option>Trader</option>
+                                <option>Réseaux sociaux</option>
+                                <option>Informatique</option>
+                                <option>Mode</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select class="form-control" name="status">
+                                <option>Millionnaire</option>
+                                <option>Milliardraire</option>
+                                <option>Trillionnaire</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('./partials/footer')-%>

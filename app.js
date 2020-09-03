@@ -6,6 +6,10 @@ const methodOverride = require("method-override");
 
 const app = express();
 
+// Body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Dotenv
 require("dotenv").config();
 
@@ -18,9 +22,6 @@ app.set("view engine", "ejs");
 
 //setup public folder
 app.use(express.static("./public"));
-app.get("/", function (req, res) {
-  res.render("index");
-});
 
 // Mysql
 const db = mysql.createConnection({
@@ -36,6 +37,17 @@ db.connect((err) => {
   console.log("Connecté à la base MySQL");
 });
 global.db = db;
+
+// Controller
+
+const { getHomePage } = require("./controllers/index");
+const { getAddPage, addPeople } = require("./controllers/add");
+
+// Routes
+
+app.get("/", getHomePage);
+app.get("/add", getAddPage);
+app.post("/add", addPeople);
 
 app.listen(PORT, function () {
   console.log("Écoute le port : ", PORT);

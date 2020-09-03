@@ -17,39 +17,25 @@
                         <th scope="col">Nationnalité</th>
                         <th scope="col">Fortune</th>
                         <th scope="col">Entreprise</th>
+                        <th scope="col">Secteur</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <% people.forEach(function(people) {%>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                        <th scope="row"><%=people.id%></th>
+                        <td><%=people.classement%></td>
+                        <td><%=people.lastname%></td>
+                        <td><%=people.firstname%></td>
+                        <td><%=people.age%> ans</td>
+                        <td><%=people.nationnality%></td>
+                        <td><%=people.wealth%></td>
+                        <td><%=people.factory%></td>
+                        <td><%=people.business%></td>
+                        <td><%=people.status%></td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                    </tr>
+                    <%});%>
                 </tbody>
             </table>
 
