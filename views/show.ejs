@@ -29,9 +29,12 @@
             <a href="/edit/<%=people.id%>">
                 <button type="button" class="btn-primary">Edit</button>
             </a>
-            <a href="/delete">
-                <button type="button" class="btn-danger">Delete</button>
-            </a>
+            <form method="POST" action="/delete/<%=people.id%>?_method=DELETE">
+                <a href="/delete">
+                    <button type="button" class="btn-danger">Delete</button>
+                </a>
+            </form>
+
         </div>
     </div>
 </div>
