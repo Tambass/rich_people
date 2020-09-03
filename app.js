@@ -43,6 +43,7 @@ global.db = db;
 const { getHomePage } = require("./controllers/index");
 const { getAddPage, addPeople } = require("./controllers/add");
 const { showPeople } = require("./controllers/show");
+const { getEditPage, editProfile } = require("./controllers/edit");
 
 // Routes
 
@@ -50,6 +51,8 @@ app.get("/", getHomePage);
 app.get("/add", getAddPage);
 app.post("/add", addPeople);
 app.get("/show/:id", showPeople);
+app.get("/edit/:id", getEditPage);
+app.put("/edit/:id", editProfile);
 
 app.listen(PORT, function () {
   console.log("Écoute le port : ", PORT);
