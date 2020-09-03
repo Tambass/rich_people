@@ -12,9 +12,10 @@ module.exports = {
     const factory = req.body.factory;
     const business = req.body.business;
     const status = req.body.status;
+    const image = req.body.image;
 
     let query =
-      "INSERT INTO `people` (classement, lastname, firstname, age, nationnality, wealth, factory, business, status) VALUES ('" +
+      "INSERT INTO `people` (classement, lastname, firstname, age, nationnality, wealth, factory, business, status, image) VALUES ('" +
       classement +
       "', '" +
       lastname +
@@ -32,6 +33,8 @@ module.exports = {
       business +
       "', '" +
       status +
+      "', '" +
+      image +
       "')";
 
     db.query(query, (err, result) => {
